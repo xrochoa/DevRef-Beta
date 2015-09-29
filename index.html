@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-style="myStyle" ng-controller="myCtrl">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Xavier Reyes Ochoa HDR Photography">
+    <meta name="keywords" content="hdr, multiple exposure, panoramic, night, black and white, photography, seattle">
+    <meta name="author" content="Xavier Reyes Ochoa">
+
+    <title>Xavier Reyes Ochoa Photography</title>
+
+    <!-- Bootstrap CSS, Social Media Custom CSS, Google Font CSS -->
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="camera.ico">
+
+    <!-- Angular JS and Modules -->
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-static-top nav-xr" id="top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class="navbar-brand">Developer's Reference <span style="font-size:12px; color: black;">by Xavier Reyes Ochoa</span></a>
+            </div>
+            <nav id="bs-navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href='#html'>HTML</a></li>
+                    <li><a href='#sass'>Sass</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--NGVIEW-->
+    <div class="relative">
+        <div class="container-fluid">
+            <div class="row-fluid no-gutter">
+                <div ng-view class="fade"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery, Bootstrap JS and App.js (controller + jquery) -->
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

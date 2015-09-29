@@ -1,0 +1,45 @@
+<div class="jumbotron text-center">
+    <h1> <img style="height: 80px; width: 80px;" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png"> HTML5</h1>
+</div>
+
+<div class="hidden-xs hidden-sm">
+    <div class="col-xs-12 col-sm-12 label-danger text-center"><h4>SYNTAX</h4></div>
+</div>
+
+<div class="col-xs-4 col-sm-4" ng-repeat="item in data.HTMLSyntax">
+    <div class="square">
+        <div class="content">
+            <div class="table text-center">
+                <a href="{{item.link}}">
+                    <h2>{{item.name}}</h2>
+                </a>
+                <div class="hidden-xs">
+                    <span>{{item.desc}}</span>
+                    <hr>
+                    <code>{{item.syntax}}</code>
+                    <hr>
+                </div>
+                <div class="hidden-xs hidden-sm">
+
+                    <div class="col-xs-12 col-sm-12 bg-primary">
+                        <div class="col-xs-6 col-sm-6 thumb text-center">Example Code</div>
+                        <div class="col-xs-6 col-sm-6 thumb text-center">Rendered</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <input class="col-xs-6 col-sm-6 thumb text-center" contenteditable="true" ng-model="item.eg">
+                        <div class="col-xs-6 col-sm-6 thumb text-center">
+                            <span ng-bind-html="item.eg"></span>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="col-xs-12 col-sm-12 label-danger" ng-repeat="note in item.notes">
+                        <ul>
+                            <li class="text-left">{{note}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
