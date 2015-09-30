@@ -3,16 +3,16 @@ angular.module("myApp", ['ngRoute', 'ngAnimate', 'ngSanitize'])
 
         $scope.params = $routeParams;
         $scope.data = {};
-        
+
         //for easier manipulation and depending on input Json this ends up instantiated as a javascript array
-        $scope.geRefJSON = function (file) {
+        $scope.geRefJSONasArray = function (file) {
             $http.get('refs/' + file + '.json')
                 .then(function (res) {
-                    $scope.data[file] = [];
+                    $scope.data[file + 'Arr'] = [];
                     var key;
                     var i = 0;
                     for (key in res.data) {
-                        $scope.data[file][i] = res.data[key];
+                        $scope.data[file + 'Arr'][i] = res.data[key];
                         i++;
                     }
                     console.log($scope.data); //check data loaded
@@ -23,7 +23,7 @@ angular.module("myApp", ['ngRoute', 'ngAnimate', 'ngSanitize'])
         $scope.geRefJSONAsObject = function (file) {
             $http.get('refs/' + file + '.json')
                 .then(function (res) {
-                    $scope.data[file] = res.data;
+                    $scope.data[file + 'Obj'] = res.data;
                     console.log($scope.data); //check data loaded
                 });
         };
@@ -44,18 +44,6 @@ angular.module("myApp", ['ngRoute', 'ngAnimate', 'ngSanitize'])
                 return other;
             }
         };
-
-        $scope.checkAndLoad = function (object, isit) {
-            if ($scope.data[object] === undefined) {
-                if (isit !== 'no') {
-                    $scope.geRefJSON(object);
-                } else {
-                    $scope.geRefJSONAsObject(object);
-                }
-            }
-        };
-
-
 
         $scope.trust = function (html) {
             return $sce.trustAsHtml(html);
@@ -80,7 +68,7 @@ angular.module("myApp", ['ngRoute', 'ngAnimate', 'ngSanitize'])
                 templateUrl: 'content/html/elements.html'
             })
             .when('/html/tag/:HTMLElementId', {
-                controller: 'HTMLElementsCtrl',
+                controller: 'HTMLOneElementCtrl',
                 templateUrl: 'content/html/element.html'
             })
             .when('/sass', {
@@ -93,15 +81,20 @@ angular.module("myApp", ['ngRoute', 'ngAnimate', 'ngSanitize'])
         });
     }])
     .controller('SassCtrl', ['$scope', function ($scope) {
-        $scope.checkAndLoad('SassCLI');
-        $scope.checkAndLoad('Sass');
+        $scope.geRefJSONasArray('SassCLI');
+        $scope.geRefJSONasArray('Sass');
             }])
     .controller('HTMLSyntaxCtrl', ['$scope', function ($scope) {
-        $scope.checkAndLoad('HTMLSyntax');
+        $scope.geRefJSONasArray('HTMLSyntax');
+            }])
+    .controller('HTMLOneElementCtrl', ['$scope', function ($scope) {
+        $scope.geRefJSONAsObject('HTMLElements');
+
             }])
     .controller('HTMLElementsCtrl', ['$scope', function ($scope) {
-        $scope.checkAndLoad('HTMLGroups', 'no');
-        $scope.checkAndLoad('HTMLElements');
+        $scope.geRefJSONAsObject('HTMLGroups');
+        $scope.geRefJSONasArray('HTMLElements');
+
 
     }])
     .filter('trust', ['$sce', function ($sce) {
