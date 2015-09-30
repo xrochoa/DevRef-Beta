@@ -488,7 +488,7 @@
         "dom": "HTMLModElement",
         "notes": [1, 2],
         "type": ["Edits"],
-        "eg": ""
+        "eg": "<p>I like <del>pop</del> <ins>rock</ins> music!</p>"
     },
     "details": {
         "tag": "details",
@@ -511,7 +511,7 @@
         "dom": "HTMLDetailsElement",
         "notes": [1, 2],
         "type": ["Interactive Elements"],
-        "eg": ""
+        "eg": "<details>\n<summary>Grietas de la Percepcion</summary>\n<p>Progressive Rock album by The Glacial Drift. 2011.</p>\n</details>"
     },
     "dfn": {
         "tag": "dfn",
@@ -527,7 +527,7 @@
         "dom": "HTMLElement",
         "notes": [1, 2],
         "type": ["Text-level Semantics"],
-        "eg": ""
+        "eg": "<p><dfn id='YITMG'>YITMG</dfn> is an EDM band from Seattle.</p>\n<a href='#YITMG'>Link to my defined instance</a>"
     },
     "dialog": {
         "tag": "dialog",
@@ -545,7 +545,7 @@
         "dom": "HTMLDialogElement",
         "notes": "",
         "type": ["Interactive Elements"],
-        "eg": ""
+        "eg": "<p>We need to talk: <dialog open>Open dialog window</dialog></p>"
     },
     "div": {
         "tag": "div",
@@ -560,7 +560,7 @@
         "dom": "HTMLDivElement",
         "notes": "",
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<div>\n<p>This is a section in the document</p>\n</div>"
     },
     "dl": {
         "tag": "dl",
@@ -986,7 +986,7 @@
         "dom": "HTMLModElement",
         "notes": [1, 2],
         "type": ["Edits"],
-        "eg": ""
+        "eg": "<p>I like <del>pop</del> <ins>rock</ins> music!</p>"
     },
     "kbd": {
         "tag": "kbd",
