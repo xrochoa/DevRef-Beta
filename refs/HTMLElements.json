@@ -610,7 +610,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Text-level Semantics"],
-        "eg": ""
+        "eg": "</p>this is some <em>emphasized text</em></p>"
     },
     "embed": {
         "tag": "embed",
@@ -635,7 +635,7 @@
         "dom": "HTMLEmbedElement",
         "notes": [1, 2],
         "type": ["Embedded Content"],
-        "eg": ""
+        "eg": "<embed src='eg/ad.swf'>"
     },
     "fieldset": {
         "tag": "fieldset",
@@ -662,7 +662,7 @@
         "dom": "HTMLFieldSetElement",
         "notes": [1, 2],
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form>\n<fieldset>\n<legend>Contact</legend>\nName: <input type='text'>\n<br>\nEmail: <input type='text'>\n</fieldset>\n</form>"
     },
     "figcaption": {
         "tag": "figcaption",
@@ -677,7 +677,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<figure>\n<img src='eg/lion.jpg' alt='lion' width='100px' height='100px'>\n <figcaption>A beautiful lion.</figcaption>\n</figure>"
     },
     "figure": {
         "tag": "figure",
@@ -696,7 +696,7 @@
         "dom": "HTMLElement",
         "notes": [1, 2],
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<figure>\n<img src='eg/lion.jpg' alt='lion' width='100px' height='100px'>\n <figcaption>A beautiful lion.</figcaption>\n</figure>"
     },
     "footer": {
         "tag": "footer",
@@ -711,7 +711,7 @@
         "dom": "HTMLElement",
         "notes": [1, 2],
         "type": ["Sections"],
-        "eg": ""
+        "eg": "<footer>\n<p>All rights reserved. <a href='http://www.xaviro.com'>xaviro.com</a>. 2015</p> </footer>"
     },
     "form": {
         "tag": "form",
@@ -736,7 +736,7 @@
         "dom": "HTMLFormElement",
         "notes": [1, 2],
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form action='SomeServerFile.asp'>\nName: <input type='text' name='Name' value='Your Name'>\nPassword: <input type='text' name='Password' value='Your Password'>\n<input type='submit' value='Submit'>\n</form>"
     },
     "h1-h6": {
         "tag": "h1-h6",
@@ -755,7 +755,7 @@
         "dom": "HTMLHeadingElement",
         "notes": "",
         "type": ["Sections"],
-        "eg": ""
+        "eg": "<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>"
     },
     "head": {
         "tag": "head",
@@ -767,7 +767,7 @@
         "dom": "HTMLHeadElement",
         "notes": [1, 2],
         "type": ["Document Metadata"],
-        "eg": ""
+        "eg": "<head>\n<meta charset='utf-8'>\n<title>Required title</title>\n<link href='eg/style.css' rel='stylesheet'>\n</head>\n<body>\n<p>Modified paragraph style by external css</p>\n</body>"
     },
     "header": {
         "tag": "header",
@@ -780,9 +780,9 @@
         "child": ["flow"],
         "attr": ["globals"],
         "dom": "HTMLElement",
-        "notes": [1, 2],
+        "notes": ["Can't be placed inside <footer>, <address> or <header>", 2],
         "type": ["Sections"],
-        "eg": ""
+        "eg": "<article>\n<header>\n<h1>Heading</h1>\n<p>Information</p>\n</header>\n</article>"
     },
     "hgroup": {
         "tag": "hgroup",
@@ -806,7 +806,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Sections"],
-        "eg": ""
+        "eg": "<article>\n<header>\n<hgroup>\n<h1>Title</h1>\n<h2>Subtitle</h2>\n</hgroup>\n<p><time datetime='2015-04-14'>date</time></p>\n</header>\n<p>Text</p>\n</article>"
     },
     "hr": {
         "tag": "hr",
@@ -818,7 +818,7 @@
         "dom": "HTMLHRElement",
         "notes": "",
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<h1>Progressive Rock</h1>\n<p>An instant classic filled with talent and creativity.</p>\n<hr>\n<h1>EDM</h1>\n<p>The creative sound of today.</p>"
     },
     "html": {
         "tag": "html",
@@ -836,7 +836,7 @@
         "dom": "HTMLHtmlElement",
         "notes": [1, 2],
         "type": ["The Root Element"],
-        "eg": ""
+        "eg": "<!DOCTYPE html>\n<html>\n<head>\n<title>Title</title>\n</head>\n<body>Content</body>\n</html>"
     },
     "i": {
         "tag": "i",
@@ -852,7 +852,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Text-level Semantics"],
-        "eg": ""
+        "eg": "<p>Xavier Reyes Ochoa is <i>Xavi Ro</i> when he makes EDM.</p>"
     },
     "iframe": {
         "tag": "iframe",
@@ -880,7 +880,7 @@
         "dom": "HTMLIFrameElement",
         "notes": [1, 2],
         "type": ["Embedded Content"],
-        "eg": ""
+        "eg": "<iframe src='#'>Didn't work message</iframe>"
     },
     "img": {
         "tag": "img",
@@ -909,7 +909,7 @@
         "dom": "HTMLImageElement",
         "notes": [1, 2],
         "type": ["Embedded Content"],
-        "eg": ""
+        "eg": "<img src='eg/lion.jpg' alt='Lion' height='100' width='100'>"
     },
     "input": {
         "tag": "input",
@@ -966,7 +966,7 @@
         "dom": "HTMLInputElement",
         "notes": [1, 2],
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form>\n<fieldset>\n<legend>Contact</legend>\nName: <input type='text'>\n<br>\nEmail: <input type='text'>\n</fieldset>\n</form>"
     },
     "ins": {
         "tag": "ins",
@@ -1002,7 +1002,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Text-level Semantics"],
-        "eg": ""
+        "eg": "<p>Press <kbd>Ctrl</kbd> + <kbd>A</kbd></p>"
     },
     "keygen": {
         "tag": "keygen",
@@ -1033,7 +1033,7 @@
         "dom": "HTMLKeygenElement",
         "notes": "",
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form action='someFile.asp' method='get'>\nPassword: <input type='text' name='password'>\nEncryption: <keygen name='security'>\n<input type='submit'>\n</form>"
     },
     "label": {
         "tag": "label",
@@ -1056,11 +1056,11 @@
         "dom": "HTMLLabelElement",
         "notes": [1, 2],
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form action='someFile.asp'>\n<label for='rock'>Rock</label>\n<input type='radio' name='genre' id='rock' value='rock'>\n<br>\n<label for='edm'>EDM</label>\n<input type='radio' name='genre' id='edm' value='edm'>\n<br>\n<input type='submit' value='Submit'>\n</form>"
     },
     "legend": {
         "tag": "legend",
-        "desc": "Caption forfieldset",
+        "desc": "Caption for fieldset",
         "class": ["none"],
         "parent": [
       "fieldset",
@@ -1071,7 +1071,7 @@
         "dom": "HTMLLegendElement",
         "notes": "",
         "type": ["Forms"],
-        "eg": ""
+        "eg": "<form>\n<fieldset>\n<legend>Contact</legend>\nName: <input type='text'>\n<br>\nEmail: <input type='text'>\n</fieldset>\n</form>"
     },
     "li": {
         "tag": "li",
@@ -1091,7 +1091,7 @@
         "dom": "HTMLLIElement",
         "notes": [1, 2],
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<ul>\n<li>Elephants</li>\n<li>Dogs</li>\n<li>Rats</li>\n</ul>"
     },
     "link": {
         "tag": "link",
@@ -1121,7 +1121,7 @@
         "dom": "HTMLLinkElement",
         "notes": [1, 2],
         "type": ["Document Metadata"],
-        "eg": ""
+        "eg": "<head>\n<meta charset='utf-8'>\n<title>Required title</title>\n<link href='eg/style.css' rel='stylesheet'>\n</head>\n<body>\n<p>Modified paragraph style by external css</p>\n</body>"
     },
     "main": {
         "tag": "main",
@@ -1136,7 +1136,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Grouping Content"],
-        "eg": ""
+        "eg": "<main>\n<h1>Music Genres</h1>\n<p>Are EDM and Progressive Rock opposing genres?</p>\n<article>\n<h1>Progressive Rock</h1>\n<p>An instant classic filled with talent and creativity.</p>\n</article>\n<article>\n<h1>EDM</h1>\n<p>The creative sound of today.</p>\n</article>\n</main>"
     },
     "map": {
         "tag": "map",
@@ -1158,7 +1158,7 @@
         "dom": "HTMLMapElement",
         "notes": [1, 2],
         "type": ["Embedded Content"],
-        "eg": ""
+        "eg": "<img src='eg/lion.jpg' alt='Lion' width='100' height='100' usemap='#lionmap'><map name='lionmap'><area shape='rect' coords='0,0,50,50' href='http://www.xaviro.com'></map>"
     },
     "mark": {
         "tag": "mark",
@@ -1174,7 +1174,7 @@
         "dom": "HTMLElement",
         "notes": "",
         "type": ["Text-level Semantics"],
-        "eg": ""
+        "eg": "<p>Remember to keep studying <mark>HTML</mark></p>"
     },
     "math": {
         "tag": "math",
@@ -1191,7 +1191,7 @@
         "dom": "Element",
         "notes": "",
         "type": ["Embedded Content"],
-        "eg": ""
+        "eg": "<math>\n<mrow>\n<mrow>\n<msup>\n<mi>a</mi>\n<mn>2</mn>\n</msup>\n<mo>+</mo>\n<msup>\n<mi>b</mi>\n<mn>2</mn>\n</msup>\n</mrow>\n<mo>=</mo>\n<msup>\n<mi>c</mi>\n<mn>2</mn>\n</msup>\n</mrow>\n</math>"
     },
     "menu": {
         "tag": "menu",
@@ -1272,7 +1272,7 @@
         "dom": "HTMLMetaElement",
         "notes": [1, 2],
         "type": ["Document Metadata"],
-        "eg": ""
+        "eg": "<head>\n<meta charset='utf-8'>\n<title>Required title</title>\n<link href='eg/style.css' rel='stylesheet'>\n</head>\n<body>\n<p>Modified paragraph style by external css</p>\n</body>"
     },
     "meter": {
         "tag": "meter",
@@ -2096,7 +2096,7 @@
         "dom": "HTMLTitleElement",
         "notes": [1, 2],
         "type": ["Document Metadata"],
-        "eg": ""
+        "eg": "<head>\n<meta charset='utf-8'>\n<title>Required title</title>\n<link href='eg/style.css' rel='stylesheet'>\n</head>\n<body>\n<p>Modified paragraph style by external css</p>\n</body>"
     },
     "tr": {
         "tag": "tr",
